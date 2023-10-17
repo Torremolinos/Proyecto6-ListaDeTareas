@@ -1,8 +1,14 @@
+@font-face {
+    font-family: 'Mulish'; /* El nombre que desees para la fuente */
+    src: url('assets/fonts/Mulish/Mulish-Italic-VariableFont_wght.ttf') format('ttf'); /* Ruta al archivo de la fuente */
+}
+
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
+
 body {
   text-align: center;
   padding: 10px;
@@ -52,4 +58,8 @@ button{
     border-radius: 5px;
     margin-left: 4px;
     padding: 8px;
+}
+.completed {
+    text-decoration: line-through;
+    color: #999;
 }

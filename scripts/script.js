@@ -5,7 +5,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("btn");
   const valor = document.getElementById("input");
-
+  const btn2 = document.getElementById("btn2");
   const div = document.getElementById("divi");
 
   const rellenaDivi = () => {
@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.className = "checkbox";
-      const diviTexto = document.createTextNode(valor.value.trim());
+
       const label = document.createElement("label");
-      label.textContent = valor.value;
+      label.textContent = valor.value.trim();
       div.appendChild(li);
       li.appendChild(checkbox);
       li.appendChild(label);
@@ -37,6 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkbox.addEventListener("change", () => {
     label.classList.toggle("completed", checkbox.checked);
+  });
+
+  const limpiarLista = () => {
+    const lista = document.querySelectorAll("li");
+    lista.forEach((lista) => {
+      div.removeChild(lista);
+    });
+  };
+
+  btn2.addEventListener("click", () => {
+    limpiarLista();
   });
   
 });
