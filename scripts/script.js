@@ -1,3 +1,7 @@
+/**
+ * @Autor: Adrian Iglesias Riño
+ * @github: https://github.com/Torremolinos/Proyecto6-ListaDeTareas.git
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("btn");
   const valor = document.getElementById("input");
@@ -16,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   btn.addEventListener("click", () => {
     rellenaDivi();
   })
-  
+
   const limpiarValor =()=>{
     valor.value="";
 
