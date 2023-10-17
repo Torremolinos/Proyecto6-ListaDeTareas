@@ -6,23 +6,37 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("btn");
   const valor = document.getElementById("input");
 
-  const divi = document.getElementById("divi");
+  const div = document.getElementById("divi");
 
   const rellenaDivi = () => {
-    const p = document.createElement("ul");
-    const p2 = document.createElement("li");
-    const diviTexto = document.createTextNode(valor.value);
-    divi.appendChild(p);
-    p.appendChild(p2);
-    p2.appendChild(diviTexto);
-    limpiarValor();
-  }
+    if (valor.value === "") {
+      alert(`Ingresa un valor valido`);
+    } else {
+      const li = document.createElement("li");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.className = "checkbox";
+      const diviTexto = document.createTextNode(valor.value.trim());
+      const label = document.createElement("label");
+      label.textContent = valor.value;
+      div.appendChild(li);
+      li.appendChild(checkbox);
+      li.appendChild(label);
+
+      limpiarValor();
+    }
+  };
   btn.addEventListener("click", () => {
     rellenaDivi();
-  })
+  });
 
-  const limpiarValor =()=>{
-    valor.value="";
+  const limpiarValor = () => {
+    valor.value = "";
+    valor.focus();
+  };
 
-  }
+  checkbox.addEventListener("change", () => {
+    label.classList.toggle("completed", checkbox.checked);
+  });
+  
 });

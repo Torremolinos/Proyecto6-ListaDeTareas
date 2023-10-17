@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Lista de Tareas</h1>
-    <input type="text" name="input" id="input"> 
-    <button id="btn">Insertar</button>
-    <div>
-        <ul id="lista"></ul>
+    <div class="wrap">
+        <h1>Lista de Tareas</h1>
+        <input type="text" name="input" id="input">
+        <button id="btn">Insertar</button>
+        <br>
+        <button id="btn2" class="limpiar">Limpiar</button>
+        <div>
+            <ul id="divi"></ul>
+        </div>
+        <br>
+        <button class="btn btn-warning" id="elevator">VOLVER AL COMIENZO</button>
     </div>
-    <div id="divi"></div>
     <script src="scripts/script.js"></script>
+    <script src="scripts/elevator.js"></script>
 </body>
 </html>

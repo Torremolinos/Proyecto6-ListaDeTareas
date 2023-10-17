@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: #2f3035;
+}
+h1 {
+    color: aliceblue;
+  padding: 10;
+  margin: 10px;
+}
+label {
+    color: rgb(255, 255, 255);
+  padding: 10px;
+}
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #290606cd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  margin: 5px;
+  margin-left: 34px;
+  display: flex;
+  justify-content:flex-start;
+  font-family: Mulish;
+}
+.wrap{
+    max-width: 600px;
+    min-height: 200px;
+    margin: 20px auto;/*auto mide los margenes izq.der. y te lo centra.*/
+    background-color: rgb(144, 165, 161);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(30, 4, 4, 0.2);
+}
+.limpiar{
+    margin-top: 14px;
+    padding: 8px;
+    border-radius: 5px;
+}
+button{
+    color: white;
+    background: #2f4ebcd5;
+    border-radius: 5px;
+    margin-left: 4px;
+    padding: 8px;
+}
