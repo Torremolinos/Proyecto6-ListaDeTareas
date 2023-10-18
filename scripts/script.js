@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
       div.appendChild(li);
       li.appendChild(checkbox);
       li.appendChild(label);
+      
+      //estoy metiendo aqui este addevent porque sino no pilla las variables label y checkbox
+      checkbox.addEventListener("change", () => {
+        label.classList.toggle("completed", checkbox.checked);
+      });
 
       limpiarValor();
     }
@@ -35,19 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
     valor.focus();
   };
 
-  checkbox.addEventListener("change", () => {
-    label.classList.toggle("completed", checkbox.checked);
-  });
 
   const limpiarLista = () => {
-    const lista = document.querySelectorAll("li");
-    lista.forEach((lista) => {
-      div.removeChild(lista);
-    });
+    const li = document.querySelectorAll("li");
+    for (let i = 0; i < li.length; i++) {
+      div.removeChild(li[i]);
+    }
   };
 
   btn2.addEventListener("click", () => {
     limpiarLista();
   });
-  
 });
