@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       li.appendChild(checkbox);
       li.appendChild(label);
       
-      //estoy metiendo aqui este addevent porque sino no pilla las variables label y checkbox
+      //estoy metiendo aqui este addevent porque sino no pilla las variables label
       checkbox.addEventListener("change", () => {
         label.classList.toggle("completed", checkbox.checked);
       });
@@ -31,8 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
       limpiarValor();
     }
   };
-  btn.addEventListener("click", () => {
-    rellenaDivi();
+  /*Aqui debes poner el input no el button como parametro
+  que sea pillado. entonces cada vez que metas enter
+  al estar en un input y le das enter lo ejecuta.*/
+  valor.addEventListener("keyup", (event) => {
+    (event.key === "Enter") ? rellenaDivi() : null;
   });
 
   const limpiarValor = () => {
